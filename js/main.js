@@ -115,3 +115,44 @@
 	});
 
 })(jQuery);
+
+
+// JavaScript to handle button clicks and filter papers
+const categoryButtons = document.querySelectorAll('.category-btn');
+const papers = document.querySelectorAll('.paper');
+
+categoryButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.getAttribute('data-category');
+
+    // Remove active class from all buttons
+    categoryButtons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    // Add active class to the clicked button
+    button.classList.add('active');
+
+    // Show all papers if "All Papers" button is clicked
+    if (category === 'all') {
+      // Show all papers
+      papers.forEach(paper => {
+        paper.style.display = 'block';
+      });
+    } else {
+      // Hide all papers
+      papers.forEach(paper => {
+        paper.style.display = 'none';
+      });
+
+      // Show papers of the selected category
+      const papersToShow = document.querySelectorAll(`[data-categories*="${category}"]`);
+      papersToShow.forEach(paper => {
+        if (category !== 'all' && !paper.getAttribute('data-categories').includes('all')) {
+          // Show paper only if it belongs to the selected category and doesn't have 'all' category
+          paper.style.display = 'block';
+        }
+      });
+    }
+  });
+});

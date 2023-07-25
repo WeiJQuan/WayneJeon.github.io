@@ -1269,3 +1269,14 @@ footer .credits a {
     bottom: 15px;
   }
 }
+
+
+/* CSS to show all papers by default */
+.paper {
+  display: block;
+}
+
+/* CSS to hide papers that do not belong to the selected category */
+.paper:not([data-categories*="all"]) {
+  display: none;
+}
