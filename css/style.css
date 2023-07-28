@@ -1280,3 +1280,58 @@ footer .credits a {
 .paper:not([data-categories*="all"]) {
   display: none;
 }
+
+/* styles.css */
+
+/* Styling for the category buttons */
+.category-btn {
+  /* Add your desired button styles here */
+/*  padding: 10px 20px;*/
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Customize the colors for different categories using data-category attribute */
+[data-category="category1"] {
+  background-color: #A7D3D4;
+  color: white;
+}
+
+[data-category="category2"] {
+  background-color: #A7D2DB;
+  color: white;
+}
+
+[data-category="category3"] {
+  background-color: #ACD0E1;
+  color: white;
+}
+
+[data-category="category4"] {
+  background-color: #B3CEE5;
+  color: white;
+}
+
+[data-category="category5"] {
+  background-color: #BDCBE6;
+  color: white;
+}
+
+[data-category="category6"] {
+  background-color: #C7C9E5;
+  color: white;
+}
+
+
+/* Optional: Add styles for hover and active states for better user experience */
+.category-btn:hover {
+  background-color: #b3cee5;
+}
+
+.category-btn:active {
+  background-color: #E0FFFF;
+}
